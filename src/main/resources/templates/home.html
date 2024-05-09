@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="/static/css/styles.css" rel="stylesheet" type="text/css">
+    <style>
+       .grid{
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          grid-gap: 10px;
+          width: 80vw;
+          margin: auto auto;
+          margin-bottom: 10px;
+          margin-top: 60px;
+        }
+        body {
+            background-image: url("https://storage.cloud.google.com/mainpageimage/AdobeStock_477088312.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .welcome {
+            grid-column-end: span 12;
+            text-align: left;
+            font-family: 'Inter', sans-serif;
+            font-size: 46px;
+            color: #FFDD9C;
+        }
+
+        .circle-container {
+            grid-column-end: span 4;
+            background-color: #071C55;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #FFCB67;
+            height: 40vh;
+            width: 30vw;
+            position: relative;
+        }
+
+         .nothing{
+            grid-column-end: span 4;
+            }
+
+        .circle-content {
+            grid-column-end: span 4;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .phrase {
+            grid-column-end: span 12;
+            color: #BDD1F0;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .top-right-links {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 20px;
+        }
+
+        .top-right-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="top-right-links">
+    <a href="/home">Home</a>
+    <a href="/profile">Profile</a>
+    <a href="/emergencyContacts">Emergency Contacts</a>
+    <a href="/map">Road Map</a>
+    <a href="/">Log out</a>
+</div>
+
+<div class="grid">
+    <div class="cell welcome">
+        Hi, Welcome to <br>
+        <strong>Winter pal</strong>
+    </div>
+    <div class="cell nothing"></div>
+    <div class="cell circle-container">
+        <div class="circle-content">
+            <h2>Winter Solstice</h2>
+            <h3><strong>365</strong></h3>
+            <small>Days left</small>
+        </div>
+    </div>
+    <div class="cell nothing"></div>
+    <div class="cell phrase">
+        "Act as if you do make a differences. It does"
+        <br>
+       <small> -William James</small>
+    </div>
+</div>
+</body>
+</html>

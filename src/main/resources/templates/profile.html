@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <title>User Profile</title>
+  <style>
+      body {
+        background-image: url("https://storage.cloud.google.com/mainpageimage/AdobeStock_477088312.jpeg");
+        background-size: cover; /* or background-size: contain; */
+        background-repeat: no-repeat;
+        color: white;
+      }
+
+      .user-container {
+        text-align: center;
+        position: relative;
+        top: 50px; /* Adjust as needed */
+      }
+      .sun {
+        background-image: url("https://storage.cloud.google.com/mainpageimage/sun.svg"); /* Replace with your sun image link */
+        background-size: cover;
+        color: #f0a500; /* Sun color */
+        border-radius: 50%;
+        display: inline-block;
+        font-size: 2em;
+        padding: 20px;
+        margin: 20px 0;
+        position: relative;
+        width: 20%;
+        height: auto;
+      }
+
+      .rays {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: -10px;
+        border-radius: 50%;
+        border: 6px solid #f0a500; /* Sun rays color */
+      }
+
+      .sun-counter {
+        font-family: 'Inter', sans-serif;
+        font-size: 42px;
+        color: #46320C;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black; /* Black color for the text */
+        font-size: 1.5em;
+      }
+
+      .user-info {
+        margin-top: 20px;
+      }
+
+      .reward-instructions {
+        font-family: 'Inter', sans-serif;
+        font-size: 36px;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .email-contact {
+        font-family: 'Inter', sans-serif;
+        font-size: 15px;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 10px;
+      }
+
+      .users{
+        font-family: 'Inter', sans-serif;
+        font-size: 36px;
+        text-align: left;
+        margin-left: 20px;
+      }
+
+      .GoBack {
+       font-family: 'Inter', sans-serif;
+        font-size: 15px;
+        text-align: left;
+        position: absolute;
+        bottom: 40px;
+        left: 20px;
+      }
+
+      .top-right-links {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1em;
+        position: relative;
+        z-index: 1000;
+      }
+
+      .top-right-links a {
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+        margin-left: 20px;
+        text-decoration: none;
+      }
+    </style>
+</head>
+<body>
+<div class="top-right-links">
+  <a href="/home">Home</a>
+  <a href="/profile">Profile</a>
+  <a href="/emergencyContacts">Emergency Contacts</a>
+  <a href="/map">Road Map</a>
+  <a href="/">Log out</a>
+</div>
+<div class="users">
+  User <br> Pablo, 19
+</div>
+<div class="user-container">
+  <div class="user-info" th:text="${fname}">Name</div>
+  <div class="sun">
+    <div class="rays"></div>
+    <br /><br />
+  </div>
+  <div class="sun-counter"><strong>5 sun</strong></div>
+  <div class="reward-instructions">
+    Gain suns every time you complete a task from the RoadMap <br />
+    and exchange for coupons in stores
+  </div>
+  <div class="email-contact">
+    Email for exchange: <br />
+    waterpomchoo@gmail.com
+  </div>
+</div>
+<div class="GoBack">
+  <a href="/home" style="color: #ffe082">Go Back</a>
+</div>
+</body>
+</html>

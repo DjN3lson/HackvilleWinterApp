@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create User</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/styles.css">
+
+    <style>
+        body {
+            background-image: url("https://storage.cloud.google.com/mainpageimage/AdobeStock_477088312.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            color: yellow;
+
+        }
+
+        h1 {
+            color: #ffe082;
+            text-align: center;
+             align-items: center;
+            justify-content: center;
+        }
+
+        input, select {
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #ffe082; /* Yellow bottom border */
+            margin-bottom: 10px; /* Add some spacing between rows */
+            outline: none; /* Remove default focus outline */
+        }
+
+        label{
+            margin-left: 30px;
+            margin-right: 15px;
+        }
+
+
+        form{
+            text-align: center;
+             align-items: center;
+            justify-content: center;
+
+        }
+
+
+
+        container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            color: yellow;
+            /* Add other styling as needed */
+        }
+
+        select option {
+            background: #fff;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+<br><br><br><br><br>
+<h1>Create User</h1><br>
+<container>
+    <form th:action="@{/createUser}" method="post" th:object="${user}">
+
+        <label>First Name</label><input type="text" th:field="*{fname}" autocomplete="off">
+        <label>Last Name</label><input type="text" th:field="*{lname}" autocomplete="off"><br><br>
+        <label>Email</label><input type="email" th:field="*{email}" required autocomplete="off">
+        <label>Password</label><input type="password" th:field="*{password}" required autocomplete="off"><br><br>
+        <label>Age</label><input type="text" th:field="*{age}" autocomplete="off">
+        <label>Country</label>
+        <select th:field="*{country}">
+            <option th:each="c : *{spanishSpeakingCountries}" th:text="${c}" th:value="${c}"></option>
+        </select><br><br>
+        <button type="submit" class="btn btn-secondary btn-lg">Create Account</button>
+        <a href="/" class="btn btn-secondary btn-lg">Go Back</a>
+    </form>
+</container>
+
+</body>
+</html>

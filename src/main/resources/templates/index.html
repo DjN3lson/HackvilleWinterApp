@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Winter Pal</title>
+    <link href="/static/css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+
+        body {
+            /* Background image properties */
+            height: 100vh;
+            background-image: url("https://storage.cloud.google.com/mainpageimage/AdobeStock_477088312.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .name{
+          grid-column-end: span 12;
+          font-family: 'Oswald', sans-serif;
+          text-size-adjust: 198px;
+          text-align: left;
+          color: #FFDD9C;
+         }
+
+
+        .svg-image {
+            width:35%;
+            height: auto;
+            max-width: 100%;
+            fill: white;
+            margin-top: 20px
+            display: block;
+        }
+
+        .subtitle{
+          font-family: 'Inter', sans-serif;
+          text-size-adjust: 36px;
+          text-align: center;
+          color: #FFCB67;
+        }
+
+        .bT1{
+        width: 100px;
+        color: #01122D;
+        margin: 10px;
+        }
+        .bT2{
+        width: 100px;
+        color: #01122D;
+        margin: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+
+
+    <img class="svg-image" src="https://storage.cloud.google.com/mainpageimage/winterPalLogo.svg">
+
+    <!--
+    <div class="cell name">
+        Winter<br> Pal
+    </div>
+    -->
+    <div class="cell subtitle">
+      A Guide for your first winter
+    </div>
+    <div class="cell bT1">
+    <a href="/create" class="btn btn-secondary btn-lg">Register</a>
+    </div>
+    <div class="cell bT2">
+    <a href="/logIn" class="btn btn-secondary btn-lg">Log In</a>
+    </div>
+</body>
+</html>
