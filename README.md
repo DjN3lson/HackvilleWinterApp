@@ -1,1 +1,1 @@
-WINTERPAL
+Hackathon Project: WINTERPAL
